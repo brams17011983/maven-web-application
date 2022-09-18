@@ -53,6 +53,7 @@ stages{
   */
 }//Stages Closing
 
+/*
 post{
 
  success{
@@ -69,7 +70,7 @@ post{
           replyTo: 'b.rams17011983@gmail.com'
  }
  
-}
+}*/
 
 
 }//Pipeline closing
