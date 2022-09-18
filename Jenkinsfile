@@ -53,10 +53,17 @@ stages{
   */
 }//Stages Closing
 
-/*
-post{
 
- success{
+post{
+	
+always{
+ emailext to: 'b.rams17011983@gmail.com',
+          subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          replyTo: 'b.rams17011983@gmail.com'
+ }
+/* 
+success{
  emailext to: 'b.rams17011983@gmail.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
@@ -68,9 +75,9 @@ post{
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           replyTo: 'b.rams17011983@gmail.com'
- }
+ }*/
  
-}*/
+}
 
 
 }//Pipeline closing
