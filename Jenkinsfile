@@ -1,7 +1,7 @@
 pipeline{
 
 environment {
-EMAIL_TO = 'b.rams@yahoo.com'
+EMAIL_TO = 'b.rams17011983@gmail.com'
 }
 	
 agent any
