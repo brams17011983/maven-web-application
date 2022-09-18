@@ -1,5 +1,9 @@
 pipeline{
 
+environment {
+EMAIL_TO = 'b.rams17011983@gmail.com'
+}
+	
 agent any
 
 tools{
@@ -57,10 +61,10 @@ stages{
 post{
 	
 always{
- emailext to: 'b.rams17011983@gmail.com',
+ emailext to: "${EMAIL_TO}",
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          replyTo: 'b.rams17011983@gmail.com'
+          replyTo: "${EMAIL_TO}"
  }
 /* 
 success{
