@@ -62,6 +62,7 @@ post{
 	
 always{
  emailext to: "${EMAIL_TO}",
+	  from: "${EMAIL_TO}",
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           replyTo: "${EMAIL_TO}"
