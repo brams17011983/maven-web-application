@@ -56,17 +56,17 @@ stages{
 post{
 
  success{
- emailext to: 'b.rams17011983@gmail.com,b.rams@yahoo.com',
+ emailext to: 'b.rams17011983@gmail.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          replyTo: 'devopstrainingblr@gmail.com'
+          replyTo: 'b.rams17011983@gmail.com'
  }
  
  failure{
- emailext to: 'b.rams17011983@gmail.com,b.rams@yahoo.com',
+ emailext to: 'b.rams17011983@gmail.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          replyTo: 'devopstrainingblr@gmail.com'
+          replyTo: 'b.rams17011983@gmail.com'
  }
  
 }
